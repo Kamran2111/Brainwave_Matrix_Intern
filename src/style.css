@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Outfit";
+  /* outline: 4px solid green !important; */
+}
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+.btn {
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  background-color: #4a90e2; /* или любой другой цвет */
+}
+.vec {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    rgb(0, 91, 236),
+    rgb(0, 73, 190) 12%,
+    rgb(0, 51, 133) 30%,
+    rgb(0, 33, 85) 46%,
+    rgb(0, 19, 48) 62%,
+    rgb(0, 8, 22) 77%,
+    #030b15 100%
+  );
+  opacity: 0.41;
+}
+
+@layer base {
+  .section {
+    @apply h-screen flex items-center justify-center;
+  }
+
+  @media (min-width: 140px) {
+    .section {
+      @apply mr-[32px] ml-[32px];
+    }
+  }
+
+  @media (min-width: 768px) {
+    .section {
+      @apply mr-[64px] ml-[64px];
+    }
+  }
+
+  @media (min-width: 960px) {
+    .section {
+      @apply mr-[96px] ml-[96px];
+    }
+  }
+
+  @media (min-width: 1500px) {
+    .section {
+      @apply mr-[128px] ml-[128px];
+    }
+  }
+
+  .btn {
+    @apply bg-btnCol rounded-[10px] text-white text-[20px] font-semibold leading-[25px];
+  }
+}
+.text-gradient-to-r {
+  background: linear-gradient(to right, #22c55e, #3b82f6, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes arrow-bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.svg-icon {
+  animation: arrow-bounce 1.5s infinite;
+}
