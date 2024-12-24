@@ -18,7 +18,7 @@ html {
 
 .btn:hover {
   transform: scale(1.1);
-  background-color: #4a90e2; /* или любой другой цвет */
+  background-color: #4a90e2;
 }
 .vec {
   width: 500px;
@@ -43,7 +43,7 @@ html {
 
   @media (min-width: 140px) {
     .section {
-      @apply mr-[32px] ml-[32px];
+      @apply mr-[40px] ml-[40px];
     }
   }
 
