@@ -6,7 +6,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit";
-  /* outline: 4px solid green !important; */
+  outline: 4px solid green !important;
 }
 html {
   scroll-behavior: smooth;
@@ -39,31 +39,7 @@ html {
 
 @layer base {
   .section {
-    @apply h-screen flex items-center justify-center;
-  }
-
-  @media (min-width: 140px) {
-    .section {
-      @apply mr-[40px] ml-[40px];
-    }
-  }
-
-  @media (min-width: 768px) {
-    .section {
-      @apply mr-[64px] ml-[64px];
-    }
-  }
-
-  @media (min-width: 960px) {
-    .section {
-      @apply mr-[96px] ml-[96px];
-    }
-  }
-
-  @media (min-width: 1500px) {
-    .section {
-      @apply mr-[128px] ml-[128px];
-    }
+    @apply h-screen flex items-center justify-center sm:mr-[40px] sm:ml-[40px] md:mr-[64px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px];
   }
 
   .btn {

@@ -2,7 +2,7 @@ import axios from "axios";
 
 document.addEventListener("DOMContentLoaded", () => {
   const links = document.querySelectorAll(".nav-link");
-  const currentHash = window.location.hash; // Получаем текущий хэш (например, #home)
+  const currentHash = window.location.hash;
   links.forEach((link) => {
     if (link.getAttribute("href") === currentHash) {
       link.classList.add("bg-gray-700", "scale-110");

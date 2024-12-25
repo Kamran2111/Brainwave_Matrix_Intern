@@ -13,13 +13,13 @@
       rel="stylesheet"
     />
   </head>
-  <body class="bg-custom-bg text-white">
+  <body class="bg-custom-bg">
     <div id="app">
       <header class="fixed top-0 left-0 z-30 w-full">
-        <div class="flex items-center justify-between">
-          <div
-            class="xl:m-[0px_128px_0px_128px] lg:m-[0px_96px_0px_96px] md:m-[0px_64px_0px_64px] sm:m-[0px_32px_0px_32px] flex items-center"
-          >
+        <div
+          class="flex items-center justify-between xl:m-[0px_128px_0px_128px] lg:m-[0px_96px_0px_96px] md:m-[0px_64px_0px_64px] sm:m-[0px_32px_0px_32px]"
+        >
+          <div class="flex items-center">
             <a href="/">
               <img
                 class="mx-auto transform transition-all xl:max-w-[80px] xl:max-h-[80px] md:max-w-[80px] md:max-h-[80px] sm:max-w-[30px] sm:max-h-[30px] duration-1000 ease-out hover:scale-125 hover:drop-shadow-4xl hover:brightness-200 hover:animate-light"
@@ -33,7 +33,7 @@
               Coinary
             </p>
           </div>
-          <div class="m-[15px_122px_14px_20px]">
+          <div>
             <button
               class="btn mt-[20px] xl:p-[23px_39px] lg:p-[18px_34px] md:p-[13px_29px] sm:p-[10px]"
             >
@@ -44,8 +44,12 @@
       </header>
 
       <main>
+        <div
+          class="bg-vectorImg absolute z-0 left-0 top-0 h-[300px] w-[300px] opacity-40"
+        ></div>
+
         <nav
-          class="fixed bottom-2 lg:bottom-10 left-3 max-w-[450px] overflow-hidden z-50 bg-gray-800 rounded-full shadow-lg p-4"
+          class="fixed z-50 bottom-2 lg:bottom-10 left-3 max-w-[450px] bg-gray-800 rounded-full shadow-lg p-4 overflow-visible"
         >
           <ul class="flex items-center gap-8">
             <li>
@@ -78,16 +82,11 @@
             </li>
           </ul>
         </nav>
-
-        <div
-          class="bg-vectorImg absolute z-0 left-0 top-0 h-[500px] w-[500px] opacity-40"
-        ></div>
-
-        <section id="home" class="section">
+        <section id="home" class="section relative z-50">
           <div class="flex items-center gap-[40px]">
             <div>
               <h1
-                class="text-5xl lg:text-4xl md:text-3xl sm:text-xl font-normal mb-3"
+                class="text-5xl lg:text-4xl md:text-3xl sm:text-xl font-normal mb-3 text-white"
               >
                 Best place buy and sell
                 <span
@@ -134,7 +133,7 @@
             <!-- Блок с изображением -->
             <div class="flex-shrink-0">
               <img
-                class="w-full lg:max-w-[600px] lg:max-h-[400px] object-cover"
+                class="w-full lg:max-w-[500px] lg:max-h-[400px] md:max-w-[400px] md:max-h-[200px] object-cover"
                 src="/graphic.png"
                 alt="Illustration"
               />
@@ -297,7 +296,9 @@
           </div>
         </section>
       </main>
-      <footer class="text-center py-12 lg:py-20 md:py-24 sm:py-28">
+      <footer
+        class="text-center sm:mr-[40px] sm:ml-[40px] md:mr-[64px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px]"
+      >
         <img
           class="mx-auto mb-6 transform transition-all duration-1000 ease-out hover:scale-125 hover:drop-shadow-4xl hover:brightness-200 hover:animate-light"
           src="/logo.webp"
