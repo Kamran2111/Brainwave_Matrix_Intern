@@ -6,21 +6,12 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Outfit";
-  outline: 4px solid green !important;
 }
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
-.btn {
-  transition: transform 0.3s ease-in-out, background-color 0.3s ease;
-}
-
-.btn:hover {
-  transform: scale(1.1);
-  background-color: #4a90e2;
-}
 .vec {
   width: 500px;
   height: 500px;
@@ -36,14 +27,19 @@ html {
   );
   opacity: 0.41;
 }
-
+.nav {
+  z-index: 1000;
+}
+.btn:hover {
+  @apply scale-110;
+}
 @layer base {
   .section {
-    @apply h-screen flex items-center justify-center sm:mr-[40px] sm:ml-[40px] md:mr-[64px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px];
+    @apply h-screen pt-[80px] flex items-center justify-center sm:mr-[40px] sm:ml-[40px] md:mr-[64px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px];
   }
 
   .btn {
-    @apply bg-btnCol rounded-[10px] text-white text-[20px] font-semibold leading-[25px];
+    @apply bg-btnCol rounded-[10px] text-white text-[20px] font-semibold leading-[25px] hover:bg-[#4a90e2] transition-transform transition-colors duration-300 ease-in-out;
   }
 }
 .text-gradient-to-r {

@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coinary</title>
+    <link rel="icon" type="image/webp" href="/logo.webp" />
     <link rel="stylesheet" href="/src/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,7 +16,7 @@
   </head>
   <body class="bg-custom-bg">
     <div id="app">
-      <header class="fixed top-0 left-0 z-30 w-full">
+      <header class="fixed top-0 left-0 z-50 w-full">
         <div
           class="flex items-center justify-between xl:m-[0px_128px_0px_128px] lg:m-[0px_96px_0px_96px] md:m-[0px_64px_0px_64px] sm:m-[0px_32px_0px_32px]"
         >
@@ -28,16 +29,17 @@
               />
             </a>
             <p
-              class="text-white font-bold xl:text-[40px] xl:leading-[50px] sm:text-base"
+              class="text-white font-bold xl:text-4xl lg:text-3xl md:text-2xl sm:text-xl"
             >
               Coinary
             </p>
           </div>
           <div>
             <button
+              id="downloadButton"
               class="btn mt-[20px] xl:p-[23px_39px] lg:p-[18px_34px] md:p-[13px_29px] sm:p-[10px]"
             >
-              Dawnload App
+              Download App
             </button>
           </div>
         </div>
@@ -49,7 +51,7 @@
         ></div>
 
         <nav
-          class="fixed z-50 bottom-2 lg:bottom-10 left-3 max-w-[450px] bg-gray-800 rounded-full shadow-lg p-4 overflow-visible"
+          class="fixed bottom-2 lg:bottom-10 left-3 max-w-[450px] bg-gray-800 rounded-full shadow-lg p-4 nav overflow-visible"
         >
           <ul class="flex items-center gap-8">
             <li>
@@ -82,7 +84,7 @@
             </li>
           </ul>
         </nav>
-        <section id="home" class="section relative z-50">
+        <section id="home" class="section relative z-40">
           <div class="flex items-center gap-[40px]">
             <div>
               <h1
@@ -104,7 +106,9 @@
               <button
                 class="btn mt-[10px] xl:p-[23px_39px] lg:p-[18px_34px] md:p-[13px_29px] sm:p-[10px]"
               >
-                Get Started
+                <a target="_blank" href="https://www.binance.com/ru">
+                  Get Started
+                </a>
               </button>
             </div>
             <!--  -->
@@ -130,7 +134,6 @@
           <div
             class="flex flex-col lg:flex-row items-center gap-8 lg:gap-[148px]"
           >
-            <!-- Блок с изображением -->
             <div class="flex-shrink-0">
               <img
                 class="w-full lg:max-w-[500px] lg:max-h-[400px] md:max-w-[400px] md:max-h-[200px] object-cover"
@@ -139,7 +142,6 @@
               />
             </div>
 
-            <!-- Блок с текстом -->
             <div>
               <p class="text-[24px] leading-[30px] font-medium text-col mb-2">
                 About us
@@ -159,7 +161,9 @@
                 class="btn mt-[20px] xl:p-[23px_39px] lg:p-[18px_34px] md:p-[13px_29px] sm:p-[10px]"
                 aria-label="Learn more about us"
               >
-                More About Us
+                <a target="_blank" href="https://www.binance.com/ru">
+                  More About Us
+                </a>
               </button>
             </div>
           </div>
@@ -187,7 +191,6 @@
               </p>
               <div>
                 <div class="counter-container flex items-center xl:gap-[40px]">
-                  <!-- Первый блок -->
                   <div class="flex flex-col items-center mr-4">
                     <div
                       class="counter text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold text-white"
@@ -201,7 +204,6 @@
                     >
                   </div>
 
-                  <!-- Второй блок -->
                   <div class="flex flex-col items-center mr-4">
                     <div
                       class="counter text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold text-white"
@@ -215,7 +217,6 @@
                     >
                   </div>
 
-                  <!-- Третий блок -->
                   <div class="flex flex-col items-center mr-4">
                     <div
                       class="counter text-5xl lg:text-4xl md:text-3xl sm:text-2xl font-bold text-white"
@@ -272,13 +273,12 @@
 
               <button
                 id="search-button"
-                class="absolute right-[4px] top-[8px] btn p-[15px_20px] sm:top-3 sm:p-[8px]"
+                class="btn absolute right-[4px] top-[8px] btn p-[15px_20px] sm:top-3 sm:p-[8px]"
               >
-                Поиск
+                Search
               </button>
             </div>
 
-            <!-- Данные о криптовалюте -->
             <div
               id="crypto-result"
               class="hidden p-6 bg-gray-800 text-white rounded-lg shadow-lg transition-all duration-300 ease-in-out"
@@ -297,7 +297,7 @@
         </section>
       </main>
       <footer
-        class="text-center sm:mr-[40px] sm:ml-[40px] md:mr-[64px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px]"
+        class="text-center sm:m-[0px_40px_40px_40px] md:m-[0px_64px_64px_64px] lg:m-[0px_96px_96px_96px] xl:m-[0px_128px_128px_128px]"
       >
         <img
           class="mx-auto mb-6 transform transition-all duration-1000 ease-out hover:scale-125 hover:drop-shadow-4xl hover:brightness-200 hover:animate-light"
@@ -317,7 +317,6 @@
             borders and unnecessary fees.
           </p>
         </div>
-        <!-- Контакты -->
         <address class="mt-10 space-y-4 text-gray-400">
           <div>
             <p class="text-sm uppercase">Phone</p>

@@ -1,24 +1,50 @@
 import axios from "axios";
 
 document.addEventListener("DOMContentLoaded", () => {
-  const links = document.querySelectorAll(".nav-link");
-  const currentHash = window.location.hash;
-  links.forEach((link) => {
-    if (link.getAttribute("href") === currentHash) {
-      link.classList.add("bg-gray-700", "scale-110");
+  const downloadButton = document.getElementById("downloadButton");
+
+  const androidLink =
+    "https://play.google.com/store/apps/details?id=com.example.app";
+  const iosLink = "https://apps.apple.com/app/id123456789";
+  const desktopLink =
+    "https://play.google.com/store/apps/details?id=com.example.app";
+
+  downloadButton.addEventListener("click", () => {
+    const userAgent = navigator.userAgent;
+
+    const isAndroid = /Android/i.test(userAgent);
+    const isIOS = /iPhone|iPad|iPod/i.test(userAgent);
+    const isDesktop = !isAndroid && !isIOS;
+
+    if (isAndroid) {
+      window.location.href = androidLink;
+    } else if (isIOS) {
+      window.location.href = iosLink;
+    } else if (isDesktop) {
+      window.location.href = desktopLink;
+    } else {
+      alert("Your device is not supported.");
     }
   });
+});
+document.addEventListener("DOMContentLoaded", () => {
+  const links = document.querySelectorAll(".nav-link");
+  const currentHash = window.location.hash;
 
-  // Для обновления активного класса при изменении хэша
-  window.addEventListener("hashchange", () => {
-    const newHash = window.location.hash;
+  const updateActiveLink = (hash) => {
     links.forEach((link) => {
-      if (link.getAttribute("href") === newHash) {
+      if (link.getAttribute("href") === hash) {
         link.classList.add("bg-gray-700", "scale-110");
       } else {
         link.classList.remove("bg-gray-700", "scale-110");
       }
     });
+  };
+
+  updateActiveLink(currentHash);
+
+  window.addEventListener("hashchange", () => {
+    updateActiveLink(window.location.hash);
   });
 });
 
