@@ -8,7 +8,6 @@
   font-family: "Outfit";
 }
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -35,7 +34,7 @@ html {
 }
 @layer base {
   .section {
-    @apply h-screen pt-[80px] flex items-center justify-center sm:mr-[40px] sm:ml-[40px] md:mr-[64px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px];
+    @apply pt-[80px]  sm:mr-[80px] sm:ml-[40px] md:mr-[130px] md:ml-[64px] lg:mr-[96px] lg:ml-[96px] xl:mr-[128px] xl:ml-[128px];
   }
 
   .btn {
